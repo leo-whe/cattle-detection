@@ -4,11 +4,6 @@ YOLO26 cattle detectors for drone imagery. This repo holds the best-performing
 checkpoints from the project, plus the training, pruning, distillation,
 pseudo-labelling and evaluation code that produced them.
 
-**Author:** Leo ([@leo-whe](https://github.com/leo-whe)), who designed and built the
-pipeline.
-**Access:** private repository. Code, model weights and results are not licensed for
-redistribution without the author's permission.
-
 The companion repository `cattle-tracking` uses `weights/cattle_nadir_m.pt` from here
 for tracking and counting in video.
 
