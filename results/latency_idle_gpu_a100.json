@@ -1,0 +1,142 @@
+{
+  "yolo26m_2560": {
+    "params": 21782140,
+    "imgsz": 2560,
+    "checkpoint_MiB": 42.55,
+    "batch1_ms": 52.91,
+    "batch1_fps": 18.9,
+    "batch8_img_ms": 47.2,
+    "batch8_fps": 21.2,
+    "test_mAP50-95": 0.6558137749194693
+  },
+  "p5drop_yolo26m_2560": {
+    "params": 16367208,
+    "imgsz": 2560,
+    "checkpoint_MiB": 31.53,
+    "batch1_ms": 47.13,
+    "batch1_fps": 21.2,
+    "batch8_img_ms": 41.64,
+    "batch8_fps": 24.0,
+    "test_mAP50-95": 0.6556045657634968
+  },
+  "yolo26s_3200": {
+    "params": 9952508,
+    "imgsz": 3200,
+    "checkpoint_MiB": 20.26,
+    "batch1_ms": 56.21,
+    "batch1_fps": 17.8,
+    "batch8_img_ms": 48.49,
+    "batch8_fps": 20.6,
+    "test_mAP50-95": 0.6486338951403938
+  },
+  "yolo26s_2560": {
+    "params": 9952508,
+    "imgsz": 2560,
+    "checkpoint_MiB": 19.94,
+    "batch1_ms": 31.51,
+    "batch1_fps": 31.7,
+    "batch8_img_ms": 26.41,
+    "batch8_fps": 37.9,
+    "test_mAP50-95": 0.6408604371216674
+  },
+  "yolo26n_3200": {
+    "params": 2506140,
+    "imgsz": 3200,
+    "checkpoint_MiB": 6.03,
+    "batch1_ms": 35.25,
+    "batch1_fps": 28.4,
+    "batch8_img_ms": 24.9,
+    "batch8_fps": 40.2,
+    "test_mAP50-95": 0.6373465938233811
+  },
+  "p5drop_yolo26n_3200": {
+    "params": 1767432,
+    "imgsz": 3200,
+    "checkpoint_MiB": 3.61,
+    "batch1_ms": 28.46,
+    "batch1_fps": 35.1,
+    "batch8_img_ms": 19.0,
+    "batch8_fps": 52.6,
+    "test_mAP50-95": 0.6348689292029056
+  },
+  "p5drop_yolo26s_2560": {
+    "params": 7024104,
+    "imgsz": 2560,
+    "checkpoint_MiB": 13.66,
+    "batch1_ms": 26.13,
+    "batch1_fps": 38.3,
+    "batch8_img_ms": 21.15,
+    "batch8_fps": 47.3,
+    "test_mAP50-95": 0.6343817620159307
+  },
+  "p5drop_yolo26s_1920": {
+    "params": 7024104,
+    "imgsz": 1920,
+    "checkpoint_MiB": 13.66,
+    "batch1_ms": 15.27,
+    "batch1_fps": 65.5,
+    "batch8_img_ms": 11.09,
+    "batch8_fps": 90.2,
+    "test_mAP50-95": 0.6229229316950367
+  },
+  "p5drop_yolo26n_2560": {
+    "params": 1767432,
+    "imgsz": 2560,
+    "checkpoint_MiB": 3.61,
+    "batch1_ms": 16.64,
+    "batch1_fps": 60.1,
+    "batch8_img_ms": 11.07,
+    "batch8_fps": 90.3,
+    "test_mAP50-95": 0.6198354065152119
+  },
+  "yolo26m": {
+    "params": 21782140,
+    "imgsz": 1280,
+    "checkpoint_MiB": 42.11,
+    "batch1_ms": 18.04,
+    "batch1_fps": 55.4,
+    "batch8_img_ms": 10.59,
+    "batch8_fps": 94.4,
+    "test_mAP50-95": 0.6031304558793037
+  },
+  "kd_s_ens_w8": {
+    "params": 7024104,
+    "imgsz": 1280,
+    "checkpoint_MiB": 13.83,
+    "batch1_ms": 13.33,
+    "batch1_fps": 75.0,
+    "batch8_img_ms": 4.66,
+    "batch8_fps": 214.7,
+    "test_mAP50-95": 0.60269743167811
+  },
+  "yolo26l": {
+    "params": 26185596,
+    "imgsz": 1280,
+    "checkpoint_MiB": 50.64,
+    "batch1_ms": 25.24,
+    "batch1_fps": 39.6,
+    "batch8_img_ms": 13.51,
+    "batch8_fps": 74.0,
+    "test_mAP50-95": 0.5974076302008958
+  },
+  "yolo26s": {
+    "params": 9952508,
+    "imgsz": 1280,
+    "checkpoint_MiB": 19.49,
+    "batch1_ms": 16.51,
+    "batch1_fps": 60.6,
+    "batch8_img_ms": 5.29,
+    "batch8_fps": 189.0,
+    "test_mAP50-95": 0.576431992894114
+  },
+  "p34_n": {
+    "params": 750280,
+    "imgsz": 1280,
+    "checkpoint_MiB": 1.8,
+    "batch1_ms": 11.72,
+    "batch1_fps": 85.3,
+    "batch8_img_ms": 3.25,
+    "batch8_fps": 307.6,
+    "test_mAP50-95": 0.46635585309443534
+  }
+}

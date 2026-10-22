@@ -1,0 +1,10 @@
+# cow_uav_images-5 (Roboflow v5): high-altitude UAV stills, 1462 train / 426 valid / 201 test.
+# `path` is relative to the repository root (see common.resolve_data); place or
+# symlink the dataset at datasets/cow_uav_images-5.
+path: datasets/cow_uav_images-5
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 6
+names: ['0', 'cattle', 'cow', 'cowrotation', 'red_squirrelrotation', 'unknownrotation']

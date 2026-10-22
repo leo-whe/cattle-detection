@@ -1,0 +1,22 @@
+{
+  "video": "cattle_video/texasranch/drone_footage_trent/DJI_20260902114849_0056_D.MP4",
+  "frame": 1787,
+  "time_sec": 29.8,
+  "gt_count": 51,
+  "domain": "oblique herd (detector already works here)",
+  "method": "union of multi-scale COCO yolo26m (imgsz 1280/1920/2560/3200, conf 0.05) and the LocateAnything teacher, NMS 0.55, then every proposal inspected as a cropped patch and recall checked on magnified tiles",
+  "proposals": 54,
+  "rejected": 3,
+  "rejected_notes": {
+    "51": "bush",
+    "52": "vegetation",
+    "53": "metal pipe or trough rail near the pen, conf 0.66"
+  },
+  "box_side_px": {
+    "min": 50.870948791503906,
+    "median": 133.29136657714844,
+    "max": 343.5419006347656
+  },
+  "purpose": "paired with frame10501 (nadir, 46 cattle) so finetuning can be checked for damage to the domain that already worked, not only for gain in the domain that failed.",
+  "caveat": "Single frame, single annotator; proposals come from the two detectors, so an animal both missed is absent here."
+}

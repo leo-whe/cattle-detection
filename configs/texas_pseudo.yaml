@@ -1,0 +1,8 @@
+# Teacher-labelled cattle frames (LocateAnything-3B), split by contiguous time blocks
+# by pseudo_label/split_pseudo_dataset.py. `path` is relative to the repository root.
+path: datasets/texas_pseudo
+train: images/train
+val: images/val
+
+nc: 1
+names: ['cattle']

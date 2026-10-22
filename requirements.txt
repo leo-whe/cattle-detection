@@ -1,0 +1,9 @@
+# Developed on ultralytics 8.4.113 / torch 2.6.0 (CUDA 12.4), Python 3.11
+ultralytics>=8.4.113
+torch>=2.6.0
+torchvision>=0.21.0
+opencv-python>=4.9.0
+numpy>=1.26.0
+pyyaml>=6.0
+# pseudo_label/build_pseudo_labels.py (teacher) additionally needs a separate
+# LocateAnything-3B environment from NVlabs/Eagle; see README.

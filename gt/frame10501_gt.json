@@ -1,0 +1,19 @@
+{
+  "video": "cattle_video/texasranch/drone_footage_trent/DJI_20260902114849_0056_D.MP4",
+  "frame": 10501,
+  "time_sec": 175.2,
+  "gt_count": 46,
+  "method": "LocateAnything-3B proposals, then every box inspected individually as a cropped patch, and recall spot-checked on four magnified tiles of the cattle band",
+  "verification": "46 of 46 proposals confirmed as real cattle (precision ~1.00); no unboxed cattle found in the tile scan. Independent of the student detector, so usable to score it.",
+  "for_comparison": {
+    "coco_yolo26m_imgsz2560": 3,
+    "yoloe_11l_imgsz2560": 0,
+    "cow_uav_best": 0
+  },
+  "box_side_px": {
+    "min": 55.6965446472168,
+    "median": 97.02635955810547,
+    "max": 158.792236328125
+  },
+  "caveat": "Single frame, single annotator. Boxes originate from the teacher, so any animal the teacher and the annotator both missed is absent from this ground truth."
+}

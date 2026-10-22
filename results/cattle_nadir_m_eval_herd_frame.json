@@ -1,0 +1,86 @@
+{
+  "gt": {
+    "video": "cattle_video/texasranch/drone_footage_trent/DJI_20260902114849_0056_D.MP4",
+    "frame": 1787,
+    "time_sec": 29.8,
+    "gt_count": 51,
+    "domain": "oblique herd (detector already works here)",
+    "method": "union of multi-scale COCO yolo26m (imgsz 1280/1920/2560/3200, conf 0.05) and the LocateAnything teacher, NMS 0.55, then every proposal inspected as a cropped patch and recall checked on magnified tiles",
+    "proposals": 54,
+    "rejected": 3,
+    "rejected_notes": {
+      "51": "bush",
+      "52": "vegetation",
+      "53": "metal pipe or trough rail near the pen, conf 0.66"
+    },
+    "box_side_px": {
+      "min": 50.870948791503906,
+      "median": 133.29136657714844,
+      "max": 343.5419006347656
+    },
+    "purpose": "paired with frame10501 (nadir, 46 cattle) so finetuning can be checked for damage to the domain that already worked, not only for gain in the domain that failed.",
+    "caveat": "Single frame, single annotator; proposals come from the two detectors, so an animal both missed is absent here."
+  },
+  "rows": [
+    {
+      "n": 40,
+      "tp": 39,
+      "recall": 0.7647058823529411,
+      "precision": 0.975,
+      "small_recall": 0.5882352941176471,
+      "model": "coco",
+      "imgsz": 1280,
+      "count_err": -11
+    },
+    {
+      "n": 48,
+      "tp": 45,
+      "recall": 0.8823529411764706,
+      "precision": 0.9375,
+      "small_recall": 0.8235294117647058,
+      "model": "coco",
+      "imgsz": 1920,
+      "count_err": -3
+    },
+    {
+      "n": 50,
+      "tp": 47,
+      "recall": 0.9215686274509803,
+      "precision": 0.94,
+      "small_recall": 0.9411764705882353,
+      "model": "coco",
+      "imgsz": 2560,
+      "count_err": -1
+    },
+    {
+      "n": 50,
+      "tp": 45,
+      "recall": 0.8823529411764706,
+      "precision": 0.9,
+      "small_recall": 0.8235294117647058,
+      "model": "finetuned",
+      "imgsz": 1280,
+      "count_err": -1
+    },
+    {
+      "n": 52,
+      "tp": 48,
+      "recall": 0.9411764705882353,
+      "precision": 0.9230769230769231,
+      "small_recall": 0.9411764705882353,
+      "model": "finetuned",
+      "imgsz": 1920,
+      "count_err": 1
+    },
+    {
+      "n": 46,
+      "tp": 46,
+      "recall": 0.9019607843137255,
+      "precision": 1.0,
+      "small_recall": 0.8823529411764706,
+      "model": "finetuned",
+      "imgsz": 2560,
+      "count_err": -5
+    }
+  ]
+}

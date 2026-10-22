@@ -1,0 +1,17 @@
+# Only the shipped checkpoints under weights/ are tracked.
+*.pt
+!weights/*.pt
+
+# Datasets, teacher models and third-party checkouts live outside version control.
+datasets/
+models/
+third_party/
+
+# Training / evaluation outputs
+runs/
+*.mp4
+*.MP4
+*.cache
+
+__pycache__/
+*.py[cod]

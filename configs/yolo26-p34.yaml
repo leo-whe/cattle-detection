@@ -1,0 +1,36 @@
+# YOLO26 variant for UAV cattle: P3/8 + P4/16 outputs only.
+# 99.7% of cow_uav_images-5 boxes are <128 px at imgsz=1280 (test max = 143 px),
+# so the stock P5/32 branch never sees a target while holding most of the
+# parameters. The P5 backbone stage is removed and SPPF/C2PSA move to P4, whose
+# C3k2 block is deepened with part of the saved budget.
+nc: 6
+end2end: True
+reg_max: 1
+scales: # [depth, width, max_channels]
+  n: [0.50, 0.25, 1024]
+  s: [0.50, 0.50, 1024]
+  m: [0.50, 1.00, 512]
+  l: [1.00, 1.00, 512]
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [64, 3, 2]] # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2]] # 1-P2/4
+  - [-1, 2, C3k2, [256, False, 0.25]] # 2
+  - [-1, 1, Conv, [256, 3, 2]] # 3-P3/8
+  - [-1, 2, C3k2, [512, False, 0.25]] # 4
+  - [-1, 1, Conv, [512, 3, 2]] # 5-P4/16
+  - [-1, 4, C3k2, [512, True]] # 6 (deepened, now the terminal stage)
+  - [-1, 1, SPPF, [512, 5, 3, True]] # 7
+  - [-1, 2, C2PSA, [512]] # 8
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]] # cat backbone P3
+  - [-1, 2, C3k2, [256, True]] # 11 (P3/8-small)
+
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 8], 1, Concat, [1]] # cat backbone P4
+  - [-1, 2, C3k2, [512, True]] # 14 (P4/16-medium)
+
+  - [[11, 14], 1, Detect, [nc]] # Detect(P3, P4)
